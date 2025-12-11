@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
     int16_t temp;
     while (fread(&temp, sizeof(int16_t), 1, input) != 0)
     {
+        // temp (buffer) variable retrieved from input file multipled by factor
         temp *= factor;
         fwrite(&temp, sizeof(int16_t), 1, output);
     }
